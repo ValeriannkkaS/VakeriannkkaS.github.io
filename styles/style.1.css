@@ -1,0 +1,20 @@
+
+.linkflex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.hirelink {
+    position: relative;
+}
+
+.hirelink:after {
+    content: '';
+    border-left: 20px solid black;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    width: 0;
+    height: 0;
+}
+
