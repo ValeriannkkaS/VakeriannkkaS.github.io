@@ -1,77 +1,64 @@
 body{
     padding: 0;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0 auto;
     font-family: "Ubuntu", serif;
+    width: 98%;
+    overflow-x: hidden;
 }
-header{
-   /* display: flex;*/
-    height:52px!important;
+/*общие*/
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
 }
-main {
-    margin-left: 0;
+.podcontainer, .podcontainer1{
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+.links {
+    color: dimgray;
+    text-decoration: none;
+    padding: 1vw 1vw;
+    vertical-align: middle;
+    font-size: 1em;
+}
+.first_links1{
+    min-width: 141px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
 }
 .first_links{
-    display: inline;
-    font-family: "Ubuntu", serif;
-    font-size: 16px;
-    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1vw;
+    transition: 0.3s;
 }
-.first{
-    width: 25px;
-    height: 25px;
-}
-.links{
-    color: dimgray;
-    text-decoration: none;
-    padding: 42px 10px 17px 10px;
-    margin: 0;
-    vertical-align: middle;
-}
-#logo{
-    margin-left: 7%;
-    margin-top: 40px;
-}
-.links:hover,
-.links1:hover{
+.links:hover{
     color: black;
-    border-bottom: solid blue 6px;
 }
-#first_links1{
-    margin-left: 20vw;
-    margin-right: 5%;
-}
-header{
-    margin-bottom: 0;
-    width: 100%;
-    height: 70px;
-    padding: 5px;
-}
-.links1{
-    color: dimgray;
-    text-decoration: none;
-    padding: 42px 10px 13px 10px;
-    margin: 0;
-    vertical-align: middle;
+.first_links:hover,
+.first_links1:hover{
+    border-bottom: blue solid 4px;
 }
 /*Здесь заканчиваются стили, примененные первому навигационному меню*/
 #s1{
     font-family: "Ubuntu", serif;
-    position: relative;
     color: white;
-    height: 600px;
+    position: relative;
 }
 .sign-links{
-    margin-left: 0;
     font-size: 18px;
-    margin-top: -25px;
     color: white;
     text-decoration: none;
     padding: 15px 89px;
     background-color: grey;
     transition: 0.5s;
     font-weight: 900 ;
-
 }
 .sign-links:hover{
     background-color: black;
@@ -80,43 +67,50 @@ h1.signature{
     font-size: 50px;
 }
 #signature{
-    position: relative;
-    bottom: 500px;
-    left: 100px;
+    position: absolute;
+    bottom: 50%;
+    left: 5%;
 }
 h2.signature{
     font-weight: 300;
 }
 #sign-bottom{
-    position: relative;
-    bottom: 280px;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
     font-weight: 300;
 }
 /*Здесь заканчиваются стили для картинки 1*/
 #aside{
     display: flex;
     list-style: none;
-    margin-top: 40px;
-    margin-left: 20px;
-    margin-bottom: 30px;
+    justify-content: start;
+    align-items: stretch;
+    margin: 0;
 }
 .aside{
-    padding: 28px 30px 25px 30px;
     text-decoration: none;
     color: grey;
     font-weight: 900;
     font-size: 14px;
     transition: 0.25s;
+    padding:10px 2vw;
+    display: block;
+    border-bottom: rgba(255, 255, 255, 0) 6px solid;
 }
 .aside:hover{
     border-bottom: black 6px solid;
     color: black;
+}
+#aside a{
+    display: block;
 }
 #s2{
     position: sticky;
     top: 0;
     background-color: rgba(255, 255, 255, 0.95);
     z-index: 100;
+    border-bottom: dimgray solid 1px;
 }
 /* aside-slicky*/
 
@@ -138,11 +132,6 @@ article p{
 }
 /* стили первых абзацев*/
 
-
-#s3{
-    margin-top: 100px;
-    margin-left: 80px;
-}
 #s3 h2{
     font-size: 50px;
     font-weight: lighter;
@@ -150,12 +139,10 @@ article p{
 }
 #s3 h3{
     font-weight: lighter;
-    font-size: 25px;
+    font-size: 2em;
 }
 .zoom{
-    height: 500px;
-    width: 22.5%;
-    margin-right: 1%;
+    width: 24%;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
@@ -164,15 +151,15 @@ article p{
     text-shadow: rgba(0, 0, 0, 0) 2px 2px 10px;
 }
 #zoom{
-    height: 500px;
-    width: 100%;
+    min-height: 500px;
     display: flex;
+    justify-content: space-between;
 }
 .text{
     position: absolute;
     color: white;
-    height: 500px;
-    top: 35%;
+    bottom: 1%;
+    left: 1%;
     margin-left: 10px;
     font-weight: lighter;
 }
@@ -202,7 +189,6 @@ input{
 }
 /*стили для картинок*/
 #s4{
-    margin-left: 8%;
     margin-top: 60px;
     width: 100%;
     height: 900px;
@@ -267,8 +253,11 @@ input{
 #configurator{
     margin-top: 1000px;
 }
+#configurator img{
+    width: 100%;
+}
 /*конфигуратор*/
-#yourbmw{
+#yourbmw {
     list-style: none;
     display: flex;
     font-size: 20px;
@@ -316,6 +305,11 @@ input{
     height: 100%;
     flex: 1.1;
 }
+.links3{
+    min-width: 220px;
+    display: flex;
+    justify-content: center;
+}
 .yourbmw3{
     flex: 2;
 
@@ -335,6 +329,7 @@ input{
     color: black;
     text-decoration: none;
 }
+
 .links3:hover{
     background-color: #0D47A1;
 }
@@ -370,6 +365,33 @@ input{
     column-gap: 0;
     row-gap: 10px;
     margin-top: -10px;
+}
+@media (max-width: 1206px) {
+    .grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .gridimg{
+        width: 90vw!important; ;
+    }
+    .gridtext{
+        width: 90vw;
+        opacity: 1!important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    h1.text1{
+        font-size: 70px!important;
+    }
+    p.text1{
+        font-size: 40px!important;
+    }
+    .text1{
+        width: 90vw!important;
+    }
+
 }
 .gridheader{
     grid-column: 1/3;
@@ -564,9 +586,10 @@ button:hover{
 
  #another{
      display: flex;
-     justify-content: center;
+     justify-content: space-around;
      align-items: center;
      margin: 0 auto;
+     flex-wrap: wrap;
  }
  .another_links{
      display: flex;
@@ -598,6 +621,7 @@ button:hover{
     bottom: 0;
     background-color: white;
     z-index: 100;
+   width: 100%;
 }
 .flex_bottom{
     margin:0;
